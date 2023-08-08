@@ -27,13 +27,13 @@ function Button({
         ...passProps,
     };
 
-    if (disable) {
-        Object.keys(props).forEach((key) => {
-            if (key.startsWith('on') && typeof props[key] === 'function') {
-                delete props[key];
-            }
-        });
-    }
+    // if (disable) {
+    //     Object.keys(props).forEach((key) => {
+    //         if (key.startsWith('on') && typeof props[key] === 'function') {
+    //             delete props[key];
+    //         }
+    //     });
+    // }
 
     if (to) {
         props.to = to;
