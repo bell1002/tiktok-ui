@@ -13,7 +13,6 @@ import {
     faCloudUpload,
     faUser,
     faCoins,
-    faGreaterThan,
     faGear,
     faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
@@ -26,6 +25,7 @@ import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import MenuItem from '~/components/Popper/Menu/MenuItem';
+import { UploadIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 
@@ -143,7 +143,7 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload Video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
                         </>
