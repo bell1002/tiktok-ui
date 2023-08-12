@@ -25,7 +25,8 @@ import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import MenuItem from '~/components/Popper/Menu/MenuItem';
-import { UploadIcon } from '~/components/Icons';
+//import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -143,7 +144,8 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload Video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <UploadIcon />
+                                    {/* <UploadIcon /> */}
+                                    <FontAwesomeIcon icon={faCloudUpload} />
                                 </button>
                             </Tippy>
                         </>
@@ -155,10 +157,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/455cde3cfb62e9c05d2bd7275d8f3ec4.jpeg?x-expires=1691204400&x-signature=7TdIG%2BzXClpmnjcONnoSOSRhes4%3D"
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
+                                fallback="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/751d9281c7f18830a694812b0643f720.jpeg?x-expires=1691996400&amp;x-signature=bXC9DXOZSrBQCtJ48RPUQeg3AFw%3D"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
