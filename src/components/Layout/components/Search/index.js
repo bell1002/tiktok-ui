@@ -7,7 +7,7 @@ import classNames from 'classnames/bind';
 import styles from './Search.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import { useDebounce } from '~/hooks';
-
+import axios from 'axios';
 const cx = classNames.bind(styles);
 function Search({ data }) {
     const [serachResult, setSearchResult] = useState([]);
@@ -23,10 +23,17 @@ function Search({ data }) {
             return;
         }
         setLoading(true);
-        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounced)}&type=less`)
-            .then((res) => res.json())
+        axios
+            .get(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounced)}&type=less`, {
+                params: {
+                    q: debounced,
+                    type: 'less',
+                },
+            })
+            // .then((res) => res.json())
             .then((res) => {
-                setSearchResult(res.data);
+                console.log(res);
+                //setSearchResult(res.data);
                 setLoading(false);
             })
             .catch(() => {
