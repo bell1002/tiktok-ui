@@ -34,7 +34,8 @@ function Menu({ children, items = [], hideOnClick = false, onChange }) {
     return (
         <Tippy
             interactive
-            delay={[0, 500]}
+            delay={[0, 700]}
+            offset={[12, 8]}
             hideOnClick={hideOnClick}
             placement="bottom-end"
             render={(attrs) => (
@@ -48,7 +49,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange }) {
                                 }}
                             />
                         )}
-                        {renderItems()}
+                        <div className={cx('menu-body')}>{renderItems()}</div>
                     </PopperWrapper>
                 </div>
             )}

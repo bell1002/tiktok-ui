@@ -20,7 +20,7 @@ import 'tippy.js/dist/tippy.css';
 
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
-import MenuItem from '~/components/Popper/Menu/MenuItem';
+//import MenuItem from '~/components/Popper/Menu/MenuItem';
 //import { UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
