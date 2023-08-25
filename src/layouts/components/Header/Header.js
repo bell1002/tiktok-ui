@@ -26,6 +26,7 @@ import Image from '~/components/Image';
 import Search from '../Search';
 import config from '~/config';
 import { Link } from 'react-router-dom';
+import { MailIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 
@@ -111,20 +112,17 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload Video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    {/* <UploadIcon /> */}
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
                             <Tippy delay={[0, 200]} content="Message" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    {/* <UploadIcon /> */}
-                                    <FontAwesomeIcon icon={faPaperPlane} />
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
                             <Tippy delay={[0, 200]} content="Mail box" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    {/* <UploadIcon /> */}
-                                    <FontAwesomeIcon icon={faMessage} />
+                                    <MailIcon />
                                 </button>
                             </Tippy>
                         </>
